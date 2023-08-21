@@ -1,0 +1,17 @@
+@charset "UTF-8";
+header {
+    text-align: center;
+}
+body {
+    font-size: 1.5em;
+}
+section{
+    padding-top:10px;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+section.imagem1 {
+    background-image: url("background001.jpg");
+    background-position: center right;
+    background-attachment: fixed;
+    background-position: cover;
+}
