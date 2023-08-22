@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@media screen  {
+.container { text-align: center; }
     
-}
+
 header {
     background-color: bisque;
     text-align: center;
@@ -34,7 +34,7 @@ color:black;
 font-family: fantasy;
 font-size: 1.1em;
 background-color: rgb(211, 121, 57);
-margin-left: 40px;
+margin-left: 10vw;
 padding: 4px 3px 4px 3px;
 border-radius: 3px;
 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.435);
@@ -42,6 +42,7 @@ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.435);
 main>nav{
 background-color: bisque;
 padding:10px;
+margin:auto;
 
 }
 
@@ -52,9 +53,10 @@ text-align: center;
 margin-bottom: 50px;
 
 }
-main>a{
-    background-color: bisque;
-    margin-left: 30px;
+main>div>a{
+    background-color: rgb(255, 228, 196);
+    margin-left: 3vw;
+    margin-right: 3vw;
     padding: 30px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -64,13 +66,17 @@ main>a{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.592);
     border-color: rgba(0, 0, 0, 0.888);
     border:2px;
-    border-style: solid;   
+    border-style: solid;  
+
     
 }
-main>a:hover{
+main>div>a:hover{
 background-color: black;
 color:white;
 
+}
+main>nav>a:hover {
+    background-color:rgb(212, 102, 24)
 }
 body{
     background-image: linear-gradient(to right, rgb(69, 67, 67),
@@ -95,6 +101,20 @@ footer {
     margin: auto;
     margin-top: 5px;
      }
+     footer>ul {
+        list-style-type: none;
+
+     }
+     footer>ul>a{
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: black;
+        background-color: bisque;
+     }
+     footer>ul>li {
+        background-color: bisque;
+     }
 img#chassi {
     display: block;
     margin: auto;
@@ -108,10 +128,11 @@ img#kansas {
     display: block;
     margin: auto;
 }
-@media screen and (max-width:650px) {
-    main>a{
+@media screen and (max-width:600px) {
+
+    /*Menu com os 2links*/
+    main>div>a{
         background-color: bisque;
-        margin-left: 3px;
         padding: 15px;
         text-decoration: none;
         font-family: Arial, Helvetica, sans-serif;
@@ -121,10 +142,16 @@ img#kansas {
         border-radius: 5px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.592);
         border-color: rgba(0, 0, 0, 0.888);
-        border:1.5px;
-        border-style: solid; }
+        border-style: solid; 
+        margin-left: 2vw;
+        margin-right: 2vw;
+        
+        
+    }
+    .container { text-align: center; }
+        /* Fotos dimensionadas para celular */
         img#chassi {
-             width: 80vw;
+            width: 80vw;
         }
         img#next {
             width: 80vw;
@@ -132,5 +159,18 @@ img#kansas {
         img#kansas {
             width: 80vw;
         }
+   main> nav > a {
+    display: block;
+    text-align: center;
+    margin:0;
+    margin-top:3px;
+    }
+    main>nav {
+
+     background-color: white;
+    }
+    main>nav>a:hover {
+        background-color:rgb(212, 102, 24)
+    }
     
 }
