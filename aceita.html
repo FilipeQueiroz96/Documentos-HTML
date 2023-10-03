@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita?</title>
+    <style>
+        #sim {
+            height: 40px;
+            width:60px;
+            
+        }
+        
+        #nao {
+            margin-left: 10px;
+            position: absolute;
+            height: 40px;
+            width: 60px;
+        }
+        .fora {
+            border: 2px solid black;
+            width: 90vw;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+            border-radius: 8px;
+        }
+        .dentro {
+            
+        }
+        h1 {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="fora" >
+    <div class="dentro">
+        <h1>Aceita?</h1>
+        <button onmousedown="clicou()" id="sim">Sim!</button>
+        <button onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+</div>
+
+<script>
+    function fuja(){
+    var botaoNao = document.getElementById("nao");
+
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var maxX = larguraJanela - botaoNao.offsetWidth;
+    var maxY = alturaJanela - botaoNao.offsetHeight;
+
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
+
+    botaoNao.style.left = aleatorioX + "px";
+    botaoNao.style.top = aleatorioY + "px";
+    }
+    
+    function clicou(){
+        window.alert("Você fez a escolha certa!")
+
+    }
+</script>
+
+</body>
+</html>
